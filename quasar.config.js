@@ -10,6 +10,7 @@
 
 const { configure } = require('quasar/wrappers')
 
+
 module.exports = configure(function (/* ctx */) {
   return {
     // https://v2.quasar.dev/quasar-cli-vite/prefetch-feature
@@ -202,3 +203,12 @@ module.exports = configure(function (/* ctx */) {
     }
   }
 })
+module.exports = function (ctx) {
+  return {
+    eslint: {
+      warnings: true, // Exibe avisos
+      errors: true, // Exibe erros
+    },
+    // Outras configurações do Quasar...
+  };
+};
